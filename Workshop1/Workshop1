@@ -1,0 +1,30 @@
+var x = 32; // Press Shift+Enter here
+var order = 'Beer'; // Press Shift+Enter here
+if (x > 50) {
+console.log("%cHe's over 50!", "color:red;" );
+} else if (x <= 50 && x> 30){
+console.log("%cMiddle aged man, who ordered some "+order, "color:yellow;");
+} else if (x <= 30 && x> 20){
+console.log("%cYoung man, who ordered "+order, "color:green;");
+} else {
+console.log("%cIt seems you're bit underaged.", "color:red;");
+}
+
+
+var arr = [];
+for (var i=0; i<15; i++) {
+var x = (Math.floor(Math.random() * 101));
+arr.push(x)
+console.log(x)
+}
+console.log(arr);
+document.write(arr);
+
+
+function addNumbers(a, b) {
+if (a + b > 100) {
+alert("Onpa iso luku!");
+}
+return a + b;
+}
+document.write(addNumbers(50, 100));

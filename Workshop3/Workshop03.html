@@ -6,6 +6,31 @@
         <link rel="stylesheet" href="css/styles.css">
         <script>
             <!-- JavaScript goes here -->
+            //Tehtävä 1
+
+            function clicked(){
+                alert("You clicked me!" + Date())
+            }
+
+            function showTable() {
+                const taulukko = document.getElementByID("example");
+                document.write(taulukko);
+            }
+
+            function geolokaatio() {
+                function success(position) {
+                console.log(position);
+                document.write(position);
+                }
+
+                navigator.geolocation.getCurrentPosition(success);
+            }
+
+            //Tehtävä 2
+            
+            function mouseover() {
+
+            }
         </script>
     </head>
     <body class="ws3">
@@ -16,9 +41,9 @@
         <h2>Exercise 1</h2>
         <p>Below you will see three buttons. Edit the source code and add an onClick-events to these buttons.</p>
         <p>
-          <button onclick="alert('You clicked me!' + Date())">Click me</button>
-          <button>Show table</button>
-          <button>Geolocation</button>
+          <button onclick="clicked()">Click me</button>
+          <button onclick="showTable()">Show table</button>
+          <button onclick="geolokaatio()">Geolocation</button>
         </p>
 
         <ol>
@@ -66,7 +91,7 @@
             <li>The last button should check Geolocation of the user, and output it to the console and to the page. Note: Some browsers might not allow you to do this. Try different browsers if you get errors.</li>
         </ol>
         <hr/>
-        <h2>Exercise 2</h2>
+        <h2 onmouseover="mouseover()">Exercise 2</h2>
         <ul>
             <li>Add an&nbsp;onMouseOver event on the&nbsp;Heading "Exercise 2" of this page.&nbsp;It should&nbsp;fire when the users mouse is moved 
         over&nbsp;it. Output "Stepped over my a mouse!" on the console.</li>

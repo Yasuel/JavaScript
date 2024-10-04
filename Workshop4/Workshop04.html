@@ -31,9 +31,26 @@
 			var logo = document.createElement('img')
 			logo.src = 'https://pngimg.com/d/google_PNG19640.png' 
 			para[2].appendChild(logo)
-			
+
 			document.body.style.backgroundColor = "blue"
 		}
+
+		//Tehtävä 2 (Napit 1 ja 2 kenties toimivat. div-elementti ei näy sivulla. css-tiedosto puuttuu)
+		function hide() {
+			var kohde = document.getElementById('me')
+			kohde.style.display = 'none';	
+		}
+
+		function show() {
+			var kohde = document.getElementById('me')
+			kohde.style.display = 'block';
+		}
+
+		function surprise() {
+			var yllärit = document.getElementsByClassName('surprise');
+			yllärit.style.fontSize = '20'
+		}
+
 
 	</script>
 
@@ -73,7 +90,7 @@
 			</label>
 			<br>
 			<label>
-				<input type="checkbox" name="CheckboxGroup1" value="3" id="CheckboxGroup1_2"> 
+				<input  onchange="surprise()" type="checkbox" name="CheckboxGroup1" value="3" id="CheckboxGroup1_2"> 
 				<span id="surpise">Surprise</span>
 			</label>
 		</p>

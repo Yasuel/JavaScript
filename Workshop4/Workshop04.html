@@ -46,9 +46,26 @@
 			kohde.style.display = 'block';
 		}
 
+		// ei toimi jostain syystä?
 		function surprise() {
 			var yllärit = document.getElementsByClassName('surprise');
-			yllärit.style.fontSize = '20'
+			yllärit.style.fontSize = 20
+		}
+
+		//Tehtävä 3
+		function autovalikko() {
+			var valinta = document.getElementById('mySelect')
+			var valitauto = valinta.value;
+			console.log(valitauto)
+			alert("Valintasi on " + valitauto + "!")
+		}
+
+		function näytäReuna() {
+
+		}
+
+		function piilotaReuna() {
+			
 		}
 
 
@@ -109,7 +126,7 @@
 				<li>When you have accomplished the above, change the image (id=&quot;carimage&quot;) below based on the users choice on the pulldown menu below. Find appropriate images from the web.
 			</ul>
 		  <p>Select a new car from the list.</p>
-		  <select name="mySelect" id="mySelect" onchange="">
+		  <select name="mySelect" id="mySelect" onchange="autovalikko()">
 			<option value="BMW">BMW         
 			<option value="Audi">Audi
 			<option value="Mercedes">Mercedes
@@ -117,7 +134,7 @@
 		  </select>
 		  <br>
 		  <br>
-		<img alt="" onmouseover="" onmouseout="" style="left: 0px; opacity: 1;" src="http://cdn.bmwblog.com/wp-content/uploads/2015/11/BMW-2-Series-Gran-Coupe-Rendering.jpg" width="400" id="carimage"/>
+		<img alt="" onmouseover="näytäReuna()" onmouseout="piilotaReuna()" style="left: 0px; opacity: 1;" src="https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/cars/segment-page/01-images/2025-malibu-highlights-04.png?imwidth=960" width="400" id="carimage"/>
 		<hr/>
 		<h2>Exercise 4: Moving things around</h2>
 		<ul>

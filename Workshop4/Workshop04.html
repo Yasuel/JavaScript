@@ -5,6 +5,38 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/styles.css">
 	</head>
+
+	<script>
+		//Tehtävä 1
+
+		function changeHeading() {
+			var otsake = document.getElementsByTagName('h1');
+			otsake[0].innerHTML = "Modified Heading!"
+		}
+
+		function secondButton() {
+			var otsikko = document.getElementsByTagName('h2');
+			otsikko[1].style.fontSize = 20
+			otsikko[1].style.fontStyle = "italic"
+			otsikko[1].style.color = "red"
+			otsikko[1].style.backgroundColor = "green"
+
+		}
+
+		//Lisää tekstin Lorem Ipsumin perään. Tämä kai oli tarkoitus.
+		function thirdButton() {
+			var para = document.getElementsByTagName('li')
+			para[2].innerHTML += ("Bonus Text!!!")
+
+			var logo = document.createElement('img')
+			logo.src = 'https://pngimg.com/d/google_PNG19640.png' 
+			para[2].appendChild(logo)
+			
+			document.body.style.backgroundColor = "blue"
+		}
+
+	</script>
+
 	<body class="ws4">
 		<h1>Workshop 4: DOM Scripting</h1>
 		<hr />
@@ -15,8 +47,8 @@
 		<p>&nbsp;Below you will see three buttons. Edit the source code and add an onClick-events to these buttons. Use Developer Console to find the </p>
 		<p>
 		  <button onclick="changeHeading();">Button 1</button>
-		  <button onclick="secondButton">Button 2</button>
-		  <button onclick="">Button 3</button>
+		  <button onclick="secondButton()">Button 2</button>
+		  <button onclick="thirdButton()">Button 3</button>
 		</p>
 
 		<ul>

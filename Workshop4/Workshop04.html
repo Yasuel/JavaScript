@@ -68,30 +68,42 @@
 		//näissä lienee sama css-tiedoston puute vaikeuttaa?
 		function näytäReuna() {
 			var auto = document.getElementById('carimage')
-			auto.style.border == 'solid'
+			auto.style.border == '10px solid'
 		}
 
 		function piilotaReuna() {
 			var auto = document.getElementById('carimage')
-			auto.style.border == 'none'
+			auto.style.border == '0px none'
 		}
 
 		//Tehtävä 4
 
 		function changePosition() {
-
+			var auto = document.getElementById('carimage')
+			auto.style.position = 'relative'
+			auto.style.top = '500px'
+			auto.style.left = '200px'
 		}
 
+		var pos = 0
 		function doMove() {
-
+			var auto = document.getElementById('carimage')
+			auto.style.position = 'relative'
+			pos = pos + 5
+			auto.style.left = pos+'px'
 		}
 
+		var opa = 1
 		function fadeOut() {
-
+			var auto = document.getElementById('carimage')
+			opa = opa - 0.05
+			auto.style.opacity = opa
+			
 		}
 
 		function remove() {
-			
+			var auto = document.getElementById('carimage')
+			auto.remove()
 		}
 
 	</script>

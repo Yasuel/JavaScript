@@ -134,6 +134,31 @@
 
 			//tehtävä 2
 
+			//Kopioin tehtävässä annetun koodinpätkän ja muokkaan sitä
+			// Load AJAX content into web page
+
+			function loadXMLFile() {
+					// Create AJAX object
+					var xmlhttp = new XMLHttpRequest();
+
+					// Specify the data / url to be fetched
+					xmlhttp.open("GET", "http://quotes.rest/qod.xml", true);
+					xmlhttp.send();
+
+					xmlhttp.onreadystatechange = function() {
+							if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				 // find myDiv and insert results there
+									document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+							}
+					}
+			}
+
+			//CORS-policy tulee vastaan tässä eikä tuo codeanywhere halua näyttää sivua kunnolla
+			//taikka edes anna ladata open in browser extensionia
+			//Toimii tai ei toimi, sitä tiedä en. Hankala jatkaa tehtävää 3.
+
+			
+
 		</script>
 	</body>
 </html>

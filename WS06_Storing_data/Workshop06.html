@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/styles.css">
 	</head>
-	<body class="ws6" onload="">
+	<body class="ws6" onload="loadData()">
 		<h1>Workshop 6: Using Localstorage</h1>
 		<hr />
 		<h2>Exercise 1: Saving the entered data</h2>
@@ -60,5 +60,41 @@
 			example, would remember the data that you have entered between browser refresh and even 
 			restarts.</p>
 		</div>
+
+		<script>
+			//Tehtävä 1
+			//alustetaan muuttuja asioita
+			let matkatiedot = ""
+
+			//funktio tiedon tallentamiseen
+			function getData() {
+				//haetaan haluttu data
+				let kohde = document.getElementById("destination").value
+				let saapuminen = document.getElementById("arrival").value
+				//lisätään data muuttujaan
+				matkatiedot += kohde + ", " + saapuminen
+
+				//laitetaan tavara localstorgaeen ja printataan konsoliin
+				localStorage.setItem("matka", matkatiedot )
+				console.log(localStorage)
+			}
+
+			//Tehtävä 2
+			
+			function loadData() {
+				let divi = document.getElementById("sessiondata")
+				let tallennettumatka = localStorage.getItem("matka")
+				divi.innerHTML = tallennettumatka
+			}
+
+			//Tehtävä 3
+
+			
+
+
+
+		</script>
+
+		
 	</body>
 </html>

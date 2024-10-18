@@ -117,5 +117,23 @@
 		<input type="button" name="Fetch3" id="Fetch3c" value="Load Iltalehti Newsfeed" onclick="loadAndParseNews('http://www.iltalehti.fi/rss/uutiset.xml')">
 		<div id="newsfeed">
 		</div>
+
+		<script>
+
+			//tehtävä 1
+			//Tehdään funktio
+			function parseData() {
+				//haetaan xml-data
+				let allquotes = document.getElementsByTagName('quote')
+				//parsitaan data loopissa ja näytetään se konsolissa
+				for (i = 0; i<allquotes.length; i++) {
+					let quote = allquotes[i].childNodes[0].nodeValue
+					console.log(quote)
+				}
+			}
+
+			//tehtävä 2
+
+		</script>
 	</body>
 </html>

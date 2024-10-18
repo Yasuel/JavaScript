@@ -52,6 +52,29 @@
 			should be used. Copy the form above here and implement sessionstorage for it. See what 
 			happens, when you close the browser. You can utilize developer tools to study the data (F12, 
 			select Application tab, then LocalStorage on the left).</p>
+
+			<div>
+				<label for="destination">Destination:</label>
+				<input type="text" name="textfield" id="sessionDestination">
+			</div>
+			<div>
+				<label for="arrival">Arrival Date:</label>
+				<input type="text" name="textfield" id="sessionArrival">
+			</div>
+			<div id="services" class="border">
+				<p>Services:</p>
+				<div><label><input type="checkbox" name="CheckboxGroup1" value="Internet" id="CheckboxGroup1_0">Internet</label></div>
+				<div><label><input type="checkbox" name="CheckboxGroup1" value="AC" id="CheckboxGroup1_1">Air Conditioning</label></div>
+				<div><label><input type="checkbox" name="CheckboxGroup1" value="minibar" id="CheckboxGroup1_2">Minibar</label></div>
+				<div><label><input type="checkbox" name="CheckboxGroup1" value="car" id="CheckboxGroup1_3">Car rent</label></div>
+				<div><label><input type="checkbox" name="CheckboxGroup1" value="sauna" id="CheckboxGroup1_4">Sauna</label></div>
+			</div>	
+			<div class="clear">
+				<p>
+				  <input type="button" name="button" id="button" value="Reserve" onclick="getSessionData()">
+				</p>
+			</div>
+
 		</div>
 		<hr/>
 		<div>
@@ -89,9 +112,22 @@
 
 			//Tehtävä 3
 
-			
+			//No jos asiaa arvuuttelen itskeseni, sanoisin että localstorage voisi olla hyvä vaikkapa
+			//verkkokaupan ostoskorin sisällön säilyttämisessä. Koska sessionstorage katoaa kun selaimen
+			//sulkee, lienee se paremmin sopivan johonkin arkaluonotoiseen dataan. esim. Pankkipalveluun liittyvät tiedot
 
+			//funktio tiedon tallentamiseen
+			function getSessionData() {
+				//haetaan haluttu data
+				let kohde = document.getElementById("sessionDestination").value
+				let saapuminen = document.getElementById("sessionArrival").value
+				//lisätään data muuttujaan
+				matkatiedot += kohde + ", " + saapuminen
 
+				//laitetaan tavara localstorgaeen ja printataan konsoliin
+				sessionStorage.setItem("matka", matkatiedot )
+				console.log(sessionStorage)
+			}
 
 		</script>
 
